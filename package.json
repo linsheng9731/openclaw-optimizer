@@ -1,6 +1,6 @@
 {
   "name": "openclaw-optimizer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OpenClaw optimizer toolkit including skill-stats analysis and suggestions",
   "type": "module",
   "main": "dist/index.js",

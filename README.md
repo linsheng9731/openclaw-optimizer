@@ -11,7 +11,9 @@ See [OpenClaw Skills](https://docs.openclaw.ai/skills) and the session-logs skil
 
 ## Install
 
-### One-click install script (Recommended)
+### One-click install (Recommended)
+
+Installs directly from GitHub release artifacts — no git clone required:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/linsheng9731/openclaw-optimizer/main/scripts/install.sh | bash
@@ -20,31 +22,31 @@ curl -fsSL https://raw.githubusercontent.com/linsheng9731/openclaw-optimizer/mai
 The script will:
 
 - check Node.js version (`>=18`)
-- detect the latest GitHub Release
-- install the `.tgz` release artifact globally via npm
+- fetch latest release from GitHub
+- download and install the `.tgz` release artifact globally via npm
+- fallback: if no `.tgz` asset exists, build from source tarball
 
 After install:
 
 ```bash
 openclaw-optimizer --help
+openclaw-skill-stats --help
 ```
 
-If you have cloned this repo and want local development setup:
+### Development install
+
+If you have cloned this repo for local development:
+
+```bash
+pnpm install
+pnpm build
+pnpm test
+```
+
+Or use the dev install script:
 
 ```bash
 npm run install:dev
-```
-
-For release publishing, generate upload artifact with:
-
-```bash
-npm run pack:release
-```
-
-You can also run it through npm:
-
-```bash
-npm run install:one-click
 ```
 
 ## Usage
@@ -114,6 +116,20 @@ pnpm test
 ```
 
 Uses fixtures under `tests/fixtures/`: sample session JSONL and a fake skill dir.
+
+## Releasing
+
+Releases are automated via GitHub Actions. To create a new release:
+
+1. Update `version` in `package.json`
+2. Commit and push: `git commit -am "chore: bump version to x.y.z"`
+3. Create and push a tag: `git tag vx.y.z && git push origin vx.y.z`
+4. GitHub Actions will:
+   - Build and test
+   - Run `pnpm pack` to create `.tgz` artifact
+   - Create a GitHub Release with the artifact attached
+
+Users can then install via the one-click script which downloads the release artifact.
 
 ## License
 
