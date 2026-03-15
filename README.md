@@ -14,16 +14,32 @@ See [OpenClaw Skills](https://docs.openclaw.ai/skills) and the session-logs skil
 ### One-click install script (Recommended)
 
 ```bash
-git clone git@github.com:linsheng9731/openclaw-optimizer.git
-cd openclaw-optimizer
-bash scripts/install.sh
+curl -fsSL https://raw.githubusercontent.com/linsheng9731/openclaw-optimizer/main/scripts/install.sh | bash
 ```
 
 The script will:
 
 - check Node.js version (`>=18`)
-- auto-select `pnpm` (preferred) or `npm`
-- install dependencies and run build
+- detect the latest GitHub Release
+- install the `.tgz` release artifact globally via npm
+
+After install:
+
+```bash
+openclaw-optimizer --help
+```
+
+If you have cloned this repo and want local development setup:
+
+```bash
+npm run install:dev
+```
+
+For release publishing, generate upload artifact with:
+
+```bash
+npm run pack:release
+```
 
 You can also run it through npm:
 

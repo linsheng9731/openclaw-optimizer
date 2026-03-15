@@ -11,7 +11,9 @@
   "scripts": {
     "build": "./node_modules/typescript/bin/tsc -p .",
     "install:one-click": "bash ./scripts/install.sh",
+    "install:dev": "bash ./scripts/install-dev.sh",
     "optimizer": "node dist/cli.js",
+    "pack:release": "npm pack",
     "skill-stats": "node dist/cli.js",
     "test": "node --experimental-vm-modules node_modules/vitest/vitest.mjs run",
     "test:watch": "node --experimental-vm-modules node_modules/vitest/vitest.mjs"
