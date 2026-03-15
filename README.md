@@ -13,8 +13,14 @@ See [OpenClaw Skills](https://docs.openclaw.ai/skills) and the session-logs skil
 
 ```bash
 cd openclaw-optimizer
-pnpm install
-pnpm build
+bash scripts/install.sh
+```
+
+or
+
+```bash
+cd openclaw-optimizer
+npm run install:one-click
 ```
 
 ## Usage
