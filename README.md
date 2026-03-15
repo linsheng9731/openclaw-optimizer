@@ -11,15 +11,23 @@ See [OpenClaw Skills](https://docs.openclaw.ai/skills) and the session-logs skil
 
 ## Install
 
+### One-click install script (Recommended)
+
 ```bash
+git clone git@github.com:linsheng9731/openclaw-optimizer.git
 cd openclaw-optimizer
 bash scripts/install.sh
 ```
 
-or
+The script will:
+
+- check Node.js version (`>=18`)
+- auto-select `pnpm` (preferred) or `npm`
+- install dependencies and run build
+
+You can also run it through npm:
 
 ```bash
-cd openclaw-optimizer
 npm run install:one-click
 ```
 
