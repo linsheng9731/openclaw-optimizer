@@ -1,0 +1,5 @@
+{"type":"session","timestamp":"2026-01-15T09:00:00.000Z"}
+{"type":"message","timestamp":"2026-01-15T10:00:00.000Z","message":{"role":"user","content":[{"type":"text","text":"hello"}]}}
+{"type":"message","timestamp":"2026-01-15T10:01:00.000Z","message":{"role":"assistant","content":[{"type":"toolCall","name":"read_file","skillName":"feishu-doc"},{"type":"toolCall","name":"mcp_web_fetch"}]}}
+{"type":"message","timestamp":"2026-01-15T10:02:00.000Z","message":{"role":"assistant","content":[{"type":"toolCall","name":"read_file"},{"type":"text","text":"ok"}]}}
+{"type":"message","timestamp":"2026-01-16T11:00:00.000Z","message":{"role":"assistant","content":[{"type":"toolCall","name":"session_logs_search","skillName":"session-logs"}]}}
