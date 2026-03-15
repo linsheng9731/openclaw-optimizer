@@ -246,11 +246,11 @@ function runSuggest(argv: string[]): void {
 
 function printHelp(): void {
   console.log(`
-openclaw-skill-stats - Stats and optimization suggestions for OpenClaw skills
+openclaw-optimizer - Optimization toolkit for OpenClaw (skill-stats feature)
 
 Usage:
-  openclaw-skill-stats [stats] [options]   Show usage statistics (default)
-  openclaw-skill-stats suggest [options]    Show optimization suggestions
+  openclaw-optimizer [stats] [options]   Show usage statistics (default)
+  openclaw-optimizer suggest [options]    Show optimization suggestions
 
 Options (both commands):
   --sessions-dir <path>   Base dir for agents/sessions (default: ~/.clawdbot/agents)

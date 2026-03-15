@@ -1,6 +1,6 @@
-# openclaw-skill-stats
+# openclaw-optimizer
 
-CLI to **stat OpenClaw skill usage** from session logs and get **optimization suggestions**. Read-only: it does not modify OpenClaw config or skill files.
+OpenClaw optimizer toolkit. Current core feature is `skill-stats`: it analyzes skill usage from session logs and generates optimization suggestions. Read-only: it does not modify OpenClaw config or skill files.
 
 ## Data sources
 
@@ -27,16 +27,16 @@ npm run install:one-click
 
 ```bash
 # Stats (default): show usage by skill, unused skills, unknown tools
-pnpm skill-stats
+pnpm optimizer
 
 # With date range and JSON
-pnpm skill-stats --since 2026-01-01 --until 2026-01-31 --by-day --json
+pnpm optimizer --since 2026-01-01 --until 2026-01-31 --by-day --json
 
 # Optimization suggestions (unused/low-use, token estimate, high-call warning)
-pnpm skill-stats suggest
+pnpm optimizer suggest
 
 # Suggest: treat skills with < 5 calls as low-usage
-pnpm skill-stats suggest --min-calls 5 --output json
+pnpm optimizer suggest --min-calls 5 --output json
 ```
 
 ### Options

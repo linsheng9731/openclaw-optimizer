@@ -1,15 +1,17 @@
 {
-  "name": "openclaw-skill-stats",
+  "name": "openclaw-optimizer",
   "version": "1.0.1",
-  "description": "CLI to stats OpenClaw skill usage from session logs and suggest optimizations",
+  "description": "OpenClaw optimizer toolkit including skill-stats analysis and suggestions",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
+    "openclaw-optimizer": "dist/cli.js",
     "openclaw-skill-stats": "dist/cli.js"
   },
   "scripts": {
     "build": "./node_modules/typescript/bin/tsc -p .",
     "install:one-click": "bash ./scripts/install.sh",
+    "optimizer": "node dist/cli.js",
     "skill-stats": "node dist/cli.js",
     "test": "node --experimental-vm-modules node_modules/vitest/vitest.mjs run",
     "test:watch": "node --experimental-vm-modules node_modules/vitest/vitest.mjs"

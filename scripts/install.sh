@@ -37,4 +37,4 @@ fi
 echo ""
 echo "Install complete."
 echo "Try:"
-echo "  npm run skill-stats -- --help"
+echo "  npm run optimizer -- --help"
